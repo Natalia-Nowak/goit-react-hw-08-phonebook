@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './ContactForm.css';
 import { useDispatch } from 'react-redux';
 import { nanoid } from 'nanoid';
-import { addContact } from 'redux/reducers/operations';
+import { addContact } from 'redux/reducers/contacts/operations';
 
 export default function ContactForm() {
   const [name, setName] = useState('');

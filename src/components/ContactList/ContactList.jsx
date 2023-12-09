@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 import './ContactList.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchContacts, deleteContact } from 'redux/reducers/operations';
+import {
+  fetchContacts,
+  deleteContact,
+} from 'redux/reducers/contacts/operations';
 import {
   selectContactsError,
   selectContactsIsLoading,
@@ -35,7 +38,7 @@ export default function ContactList() {
         )
         .map(contact => (
           <li className="contact-list-item" key={contact.id}>
-            {contact.name}: {contact.phone}
+            {contact.name}: {contact.number}
             <button
               className="button-list"
               onClick={() => handleDelete(contact.id)}
