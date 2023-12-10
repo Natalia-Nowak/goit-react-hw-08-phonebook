@@ -44,6 +44,7 @@ export const App = () => {
           path="menu"
           element={<PrivateRoute element={<UserMenu />} redirect="/login" />}
         />
+        <Route path="*" element={<Home />} />
       </Route>
     </Routes>
   );
